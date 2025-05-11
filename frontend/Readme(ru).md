@@ -45,4 +45,5 @@
 
 Переведено с помощью DeepL.com (бесплатная версия)
 ## Интерфейс
-![Иллюстрация для проекта]()
+## Интерфейс
+![Иллюстрация для проекта](https://github.com/ruslan709/distributed-calculator/tree/main/frontend/interface)
