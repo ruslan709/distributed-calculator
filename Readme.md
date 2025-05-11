@@ -57,7 +57,7 @@
 ## Структура проекта
 Проект состоит из двух основных частей:
 
-- **[Frontend](./frontend/README(ru).md)** - клиентская часть, реализованная на HTML, CSS и JavaScript. В папке `frontend` находится подробная документация по установке и запуску фронтенда.
+- ![Frontend](https://github.com/ruslan709/distributed-calculator/blob/main/frontend/Readme(ru).md) - клиентская часть, реализованная на HTML, CSS и JavaScript. В папке `frontend` находится подробная документация по установке и запуску фронтенда.
 
 - **Backend** - серверная часть, написанная на Go, обеспечивающая логику приложения, работу с базой данных и API.
 
@@ -92,7 +92,7 @@ distributed-calculator
 └── README(eng).md          
 ```
 
-![ Основные компоненты  проекта](https://github.com/ruslan709/distributed-calculator/blob/main/frontend/Readme(ru).md)
+![ Основные компоненты  frontend](https://github.com/ruslan709/distributed-calculator/blob/main/frontend/Readme(ru).md)
 ### Основные компоненты backend:
 - **calc1/** и **calc2/**  
   Два отдельных сервиса-калькулятора, которые выполняют арифметические вычисления. Каждый реализован как отдельное приложение с файлом `main.go`.
