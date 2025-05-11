@@ -1,0 +1,215 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: #f5f7fa;
+}
+
+/* Стили для секции аутентификации */
+.auth-section {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 450px;
+    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    color: white;
+    z-index: 100;
+}
+
+.auth-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#login-form,
+#register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#login-form h2,
+#register-form h2 {
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+    font-size: 24px;
+    text-align: center;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 20px 14px 45px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #6B73FF;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(107, 115, 255, 0.2);
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #95a5a6;
+}
+
+button.auth-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0.9;
+}
+
+.switch-form {
+    margin-top: 20px;
+    color: #7f8c8d;
+    text-align: center;
+    font-size: 14px;
+}
+
+.switch-form a {
+    color: #6B73FF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+/* Оригинальные стили (без изменений) */
+#calculator,
+#calculation-settings,
+#computing-resources {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    background: white;
+}
+
+input[type="text"],
+input[type="number"] {
+    margin: 10px 0;
+    padding: 10px;
+    width: calc(100% - 22px);
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.calculation-result {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgb(181, 7, 7);
+}
+
+.calculator-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.calculation-result > div {
+    margin-bottom: 5px;
+}
+
+.calculation-result > div:last-child {
+    margin-bottom: 0;
+}
+
+.calculation-result.error {
+    background-color: rgb(181, 7, 7);
+}
+
+.calculation-result.success {
+    background-color: #4CAF50;
+}
+
+.calculation-result.pending {
+    background-color: gray;
+}
+
+.server-status {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: white;
+}
+
+.server-status p {
+    margin: 5px 0;
+}
+
+.server-status.running {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.server-status.error {
+    background-color: rgb(181, 7, 7);
+    color: white;
+}
+
+/* Скрытие форм */
+#register-form {
+    display: none;
+}

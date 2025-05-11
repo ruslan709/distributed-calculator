@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package calculator;
+
+// Указываем Go-пакет для сгенерированного кода
+option go_package = "calculatorapi/proto/calculator";
+
+// Сервис CalculatorService с двумя RPC методами
+service CalculatorService {
+  // Выполнить вычисление
+  rpc PerformCalculation (CalculationRequest) returns (CalculationResponse) {}
+  // Проверить статус сервера
+  rpc CheckStatus (StatusRequest) returns (StatusResponse) {}
+}
+
+// Запрос на вычисление
+message CalculationRequest {
+  int32 id = 1;                       // Идентификатор операции
+  string operation = 2;               // Выражение для вычисления
+  map<string, int32> times = 3;      // Время выполнения операций (например, "add_duration": 2)
+}
+
+// Ответ с результатом вычисления
+message CalculationResponse {
+  int32 id = 1;                      // Идентификатор операции
+  double result = 2;                 // Результат вычисления
+}
+
+// Запрос статуса сервера (пустое сообщение)
+message StatusRequest {}
+
+// Ответ со статусом сервера
+message StatusResponse {
+  bool running = 1;                  // Флаг, что сервер запущен
+  int32 maxGoroutines = 2;           // Максимальное число горутин
+  int32 currentGoroutines = 3;       // Текущее число горутин
+}

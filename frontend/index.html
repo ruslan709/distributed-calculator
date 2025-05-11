@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Распределенный калькулятор</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Authentication Section -->
+<section id="auth-section" class="auth-section" style="display:flex;">
+    <div class="auth-container">
+        <div id="login-form">
+            <h2>Вход</h2>
+            <div class="input-group">
+                <span class="input-icon">👤</span>
+                <input type="text" id="login-username" placeholder="Имя пользователя">
+            </div>
+            <div class="input-group">
+                <span class="input-icon">🔒</span>
+                <input type="password" id="login-password" placeholder="Пароль">
+            </div>
+            <button class="auth-btn" onclick="login()">Войти</button>
+            <div class="switch-form">
+                Нет аккаунта? <a href="#" onclick="switchToRegister()">Зарегистрироваться</a>
+            </div>
+        </div>
+        
+        <div id="register-form">
+            <h2>Регистрация</h2>
+            <div class="input-group">
+                <span class="input-icon">👤</span>
+                <input type="text" id="register-username" placeholder="Имя пользователя">
+            </div>
+            <div class="input-group">
+                <span class="input-icon">🔒</span>
+                <input type="password" id="register-password" placeholder="Пароль">
+            </div>
+            <button class="auth-btn" onclick="register()">Зарегистрироваться</button>
+            <div class="switch-form">
+                Уже есть аккаунт? <a href="#" onclick="switchToLogin()">Войти</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Main Application Section -->
+    <section id="app-section" style="display: none;">
+        <!-- Calculator Page -->
+        <button onclick="logout()">Выйти</button> <!-- Logout Button -->
+        <section id="calculator">
+            <header>
+                <h1>Калькулятор</h1>
+                <h4>Допустимые операции: + - / *</h4>
+                <h4>Деление на ноль запрещено</h4>
+            </header>
+            <input type="text" id="expression" placeholder="Enter the expression to calculate">
+            <div class="calculator-buttons">
+                <div>
+                    <button onclick="submitCalculation()">Вычислить</button>
+                </div>
+                <div>
+                    <button id="reload-operations-status" onclick="updateResults()">Обновить результаты</button>
+                </div>
+                <div>
+                    <button id="clear-all-calculations" onclick="clearAllCalculationsAndUpdate()">Очистить все вычисления</button>
+                </div>
+            </div>
+            <div id="calculation-results">
+  
+            </div>
+        </section>
+
+  
+        <section id="calculation-settings">
+            <header>
+                <h1>Настройки вычислений</h1>
+                <h4>Время указано в СЕКУНДАХ</h4>
+            </header>
+            <div>
+                <label for="plus-time">Время выполнения операции сложения (+):</label>
+                <input type="number" id="plus-time" value="5" min="0">
+                
+                <label for="minus-time">Время выполнения операции вычитания (-): </label>
+                <input type="number" id="minus-time" value="5" min="0">
+                
+                <label for="multiply-time">Время выполнения операции умножения (*):</label>
+                <input type="number" id="multiply-time" value="5" min="0">
+                
+                <label for="divide-time">Время выполнения операции деления (/): </label>
+                <input type="number" id="divide-time" value="5" min="0">
+
+                <label for="inactive-server-time">Время бездействия сервера:</label>
+                <input type="number" id="inactive-server-time" value="60" min="0">
+                
+                <button onclick="saveSettings()">Применить</button>
+            </div>
+        </section>
+
+  
+        <section id="computing-resources">
+            <header>
+                <h1>Вычислительные ресурсы</h1>
+            </header>
+            <button id="reload-server-status">Обновить статус сервера</button>
+            <div id="server-statuses">
+            
+            </div>
+        </section>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
