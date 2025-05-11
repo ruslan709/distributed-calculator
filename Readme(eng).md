@@ -235,7 +235,7 @@ Server response example:
 Server is shutting down...
 ```
 ## Interface
-![Illustration for the project]()
+![Illustration for the project](https://github.com/ruslan709/distributed-calculator/tree/main/frontend/interface)
 # Thank you for your interest in the Distributed Calculator project! # 
 This project demonstrates the principles of building scalable, fault-tolerant and multi-user distributed systems in the Go language using modern technologies: gRPC, PostgreSQL, JWT authorization and microservice architecture.
 # Special thanks to the Go development course team for their support and useful materials.
