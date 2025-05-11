@@ -45,4 +45,5 @@ This is a web interface for a distributed calculator with support for registrati
 
 Translated with DeepL.com (free version)
 ## Interface
-![Illustration for the project]()
+## Interface
+![Illustration for the project](https://github.com/ruslan709/distributed-calculator/tree/main/frontend/interface )
