@@ -8,10 +8,12 @@ This is a web interface for a distributed calculator with support for registrati
 * Viewing the status of servers (orchestrator and calculators)
 * Automatic updating of results and server statuses
 ## Project structure
-* frontend/
-* ├─── index.html ## Application home page
-* ├──── styles.css # Basic styles
-# └──── script.js # Application scripts
+```text
+frontend/
+├── index.html      # Main application page
+├── styles.css      # Core stylesheets
+└── script.js       # Application scripts
+```
 ## Launch
 > **Move to the frontend folder**
 > This is usually the `frontend` folder or similar.
