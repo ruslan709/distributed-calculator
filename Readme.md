@@ -91,7 +91,8 @@ distributed-calculator
 ├── README(ru).md          
 └── README(eng).md          
 ```
-### Основные компоненты(./frontend/README(ru).md)**
+
+![ Основные компоненты  проекта](https://github.com/ruslan709/distributed-calculator/blob/main/frontend/Readme(ru).md)
 ### Основные компоненты backend:
 - **calc1/** и **calc2/**  
   Два отдельных сервиса-калькулятора, которые выполняют арифметические вычисления. Каждый реализован как отдельное приложение с файлом `main.go`.
